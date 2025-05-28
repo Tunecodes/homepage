@@ -1,0 +1,348 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Ancizar Serif", serif;
+}
+
+/* animation */
+
+.github:hover,
+.linkedin:hover,
+.X:hover {
+  animation: 0.4s linear infinite alternate jump;
+  cursor: pointer;
+}
+
+@keyframes jump {
+  from {
+    transform: translateY(0em);
+  }
+
+  to {
+    transform: translateY(-1em);
+  }
+}
+
+.project {
+  transition: transform 0.5s ease;
+}
+
+.project:hover {
+  transform: translateY(-1em);
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 2fr 3fr 2fr;
+}
+
+/* the top part of the page */
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #0891b2;
+
+  padding: 2rem 0rem 5rem 0rem;
+}
+
+/* introduction box */
+.intro {
+  display: grid;
+  height: 22rem;
+  width: 55em;
+  align-self: center;
+  box-shadow: 0px 0px 10px gray;
+  padding-left: 2em;
+  grid-template-rows: 1fr 3fr 1fr;
+  background-color: white;
+}
+
+.intro > p {
+  font-size: 1.5em;
+}
+
+.intro img {
+  margin-left: 0.8em;
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.intro nav {
+  justify-self: end;
+  margin-right: 1em;
+}
+
+/* profile picture */
+.pic-con {
+  width: 20rem;
+  height: 25rem;
+  position: relative;
+}
+
+.pic-con > img {
+  width: 100%;
+  height: 25rem;
+  object-fit: fill;
+}
+
+.pic-con > h2 {
+  position: absolute;
+  top: 70%;
+  left: 35%;
+  color: white;
+  font-size: 4em;
+}
+
+/* middle part of the page */
+
+.middle > h1 {
+  margin: 3rem 0rem 1rem 5rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+  width: 25rem;
+}
+
+.project-top {
+  height: 20rem;
+  background-color: red;
+  box-shadow: 0px 0px 5px gray;
+}
+
+.project-top > p {
+  font-size: 4em;
+  justify-self: center;
+  text-align: center;
+  color: white;
+}
+
+.project-bot {
+  padding: 1em;
+  height: 10rem;
+  box-shadow: 0px 0px 5px gray;
+}
+
+.project-bot > div {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.project-bot img {
+  margin-left: 12px;
+  margin-bottom: 15px;
+  width: 2em;
+  height: 2em;
+}
+
+.project-bot img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#project-2 .project-top {
+  background-color: blue;
+}
+
+#project-3 .project-top {
+  background-color: green;
+}
+
+#project-4 .project-top {
+  background-color: purple;
+}
+
+#project-5 .project-top {
+  background-color: yellow;
+}
+
+#project-6 .project-top {
+  background-color: pink;
+}
+
+/* Bottom aka the footer */
+
+footer {
+  display: flex;
+  margin-top: 5rem;
+  background-color: #0891b2;
+  height: 20rem;
+  color: white;
+}
+
+footer img {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 1rem;
+}
+
+footer > section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15rem;
+  gap: 2rem;
+  align-self: center;
+}
+
+.footer-pic {
+  width: 25rem;
+  height: 18rem;
+  margin-left: 25rem;
+  align-self: center;
+}
+
+@media (max-width: 1100px) {
+  /* top section of page */
+  header {
+    justify-content: start;
+  }
+
+  .pic-con {
+    margin-left: 2.5rem;
+    margin-top: 2rem;
+    z-index: 2;
+  }
+
+  .pic-con img {
+    width: 18rem;
+    height: 22rem;
+  }
+
+  .pic-con > h2 {
+    top: -10px;
+    left: 75%;
+    font-size: 50px;
+  }
+
+  .intro {
+    position: absolute;
+    left: 200px;
+    top: 125px;
+    padding-left: 10em;
+    padding-right: 1em;
+    width: 30rem;
+    height: auto;
+    z-index: 1;
+  }
+
+  .intro p {
+    font-size: 20px;
+  }
+
+  /* middle section of page*/
+  .projects-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .middle > h1 {
+    margin: 3rem 0rem 1rem 3rem;
+  }
+
+  .project {
+    width: 23rem;
+    height: 25rem;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .project-top {
+    padding: 20px;
+    height: 15rem;
+  }
+
+  .project-bot img {
+    width: 27px;
+  }
+
+  /* bottom section */
+
+  footer > section {
+    margin-left: 3rem;
+  }
+
+  .footer-pic {
+    margin-left: 5rem;
+  }
+
+  @media (max-width: 600px) {
+
+    /* top section */
+    header {
+      justify-content: center;
+    }
+
+    .pic-con {
+      margin-left: 0px;
+      margin-top: 2rem;
+      height: 48.5rem;
+      z-index: 2;
+    }
+
+    .pic-con img {
+      position: absolute;
+      left: -30px;
+      width: 24rem;
+      height: 28rem;
+    }
+
+    .pic-con > h2 {
+      position: absolute;
+      top: 380px;
+      left: 150px;
+      font-size: 50px;
+    }
+
+    .projects-container {
+      grid-template-columns: 1fr;
+    }
+
+    .intro {
+      top: 500px;
+      left: 0px;
+      width: auto;
+      text-align: center;
+      padding: 1em 1em 1em 1em;
+    }
+
+    .intro > nav {
+      margin-top: 1.5em;
+    }
+
+    /* middle section */
+
+    .project-container {
+      display: flex;
+    }
+
+    .middle > h1 {
+      text-align: center;
+      margin-left: 0px;
+    }
+
+    .project {
+      justify-self: center;
+      margin-left: 0px;
+      width: 30rem;
+      height: 35rem;
+    }
+
+    /* bottom section */
+
+    .footer-pic {
+      display: none;
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
